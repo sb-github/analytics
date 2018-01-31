@@ -52,3 +52,30 @@ C:\Users\Paul\VSProjects\Analytics\analytics\ReportingDataBase\obj\Debug\Reporti
 C:\Users\Paul\VSProjects\Analytics\analytics\ReportingDataBase\obj\Debug\ReportingDataBase.csproj.CoreCompileInputs.cache
 C:\Users\Paul\VSProjects\Analytics\analytics\ReportingDataBase\obj\Debug\ReportingDataBase.dll
 C:\Users\Paul\VSProjects\Analytics\analytics\ReportingDataBase\obj\Debug\ReportingDataBase.pdb
+D:\Vicktor\-=Navchannya=-\4 kurs\Praktika\analytics\ReportingDataBase\bin\ReportingDataBase.dll.config
+D:\Vicktor\-=Navchannya=-\4 kurs\Praktika\analytics\ReportingDataBase\bin\ReportingDataBase.dll
+D:\Vicktor\-=Navchannya=-\4 kurs\Praktika\analytics\ReportingDataBase\bin\ReportingDataBase.pdb
+D:\Vicktor\-=Navchannya=-\4 kurs\Praktika\analytics\ReportingDataBase\bin\AutoMapper.dll
+D:\Vicktor\-=Navchannya=-\4 kurs\Praktika\analytics\ReportingDataBase\bin\DnsClient.dll
+D:\Vicktor\-=Navchannya=-\4 kurs\Praktika\analytics\ReportingDataBase\bin\EntityFramework.dll
+D:\Vicktor\-=Navchannya=-\4 kurs\Praktika\analytics\ReportingDataBase\bin\EntityFramework.SqlServer.dll
+D:\Vicktor\-=Navchannya=-\4 kurs\Praktika\analytics\ReportingDataBase\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Vicktor\-=Navchannya=-\4 kurs\Praktika\analytics\ReportingDataBase\bin\MongoDB.Bson.dll
+D:\Vicktor\-=Navchannya=-\4 kurs\Praktika\analytics\ReportingDataBase\bin\MongoDB.Driver.Core.dll
+D:\Vicktor\-=Navchannya=-\4 kurs\Praktika\analytics\ReportingDataBase\bin\MongoDB.Driver.dll
+D:\Vicktor\-=Navchannya=-\4 kurs\Praktika\analytics\ReportingDataBase\bin\MySql.Data.dll
+D:\Vicktor\-=Navchannya=-\4 kurs\Praktika\analytics\ReportingDataBase\bin\System.Buffers.dll
+D:\Vicktor\-=Navchannya=-\4 kurs\Praktika\analytics\ReportingDataBase\bin\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\Vicktor\-=Navchannya=-\4 kurs\Praktika\analytics\ReportingDataBase\bin\AutoMapper.xml
+D:\Vicktor\-=Navchannya=-\4 kurs\Praktika\analytics\ReportingDataBase\bin\DnsClient.xml
+D:\Vicktor\-=Navchannya=-\4 kurs\Praktika\analytics\ReportingDataBase\bin\EntityFramework.xml
+D:\Vicktor\-=Navchannya=-\4 kurs\Praktika\analytics\ReportingDataBase\bin\EntityFramework.SqlServer.xml
+D:\Vicktor\-=Navchannya=-\4 kurs\Praktika\analytics\ReportingDataBase\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Vicktor\-=Navchannya=-\4 kurs\Praktika\analytics\ReportingDataBase\bin\MongoDB.Bson.xml
+D:\Vicktor\-=Navchannya=-\4 kurs\Praktika\analytics\ReportingDataBase\bin\MongoDB.Driver.xml
+D:\Vicktor\-=Navchannya=-\4 kurs\Praktika\analytics\ReportingDataBase\bin\MongoDB.Driver.Core.xml
+D:\Vicktor\-=Navchannya=-\4 kurs\Praktika\analytics\ReportingDataBase\bin\MySql.Data.xml
+D:\Vicktor\-=Navchannya=-\4 kurs\Praktika\analytics\ReportingDataBase\obj\Debug\ReportingDataBase.csprojResolveAssemblyReference.cache
+D:\Vicktor\-=Navchannya=-\4 kurs\Praktika\analytics\ReportingDataBase\obj\Debug\ReportingDataBase.csproj.CoreCompileInputs.cache
+D:\Vicktor\-=Navchannya=-\4 kurs\Praktika\analytics\ReportingDataBase\obj\Debug\ReportingDataBase.dll
+D:\Vicktor\-=Navchannya=-\4 kurs\Praktika\analytics\ReportingDataBase\obj\Debug\ReportingDataBase.pdb

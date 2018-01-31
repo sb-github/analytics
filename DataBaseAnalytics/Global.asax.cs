@@ -24,8 +24,8 @@ namespace DataBaseAnalytics
             thread.IsBackground = true;
             thread.Name = "Time";
             thread.Start();
-            SkillRepository repo = new SkillRepository();
-            repo.copySkills();
+            //SkillRepository repo = new SkillRepository();
+            //repo.copySkills();
 
         }
 

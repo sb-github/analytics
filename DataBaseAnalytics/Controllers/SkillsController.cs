@@ -13,13 +13,14 @@ namespace DataBaseAnalytics.Controllers
 {
     public class SkillsController : Controller
     {
-        //private DatabaseContext db = new DatabaseContext();
-        private SkillRepository repo=new SkillRepository();
+        private DatabaseContext db = new DatabaseContext();
+        //private SkillRepository repo=new SkillRepository();
 
         // GET: Skills
         public ActionResult Index()
         {
-            return View(repo.GetAll());
+            return View(db.Skills.ToList());
+            //return View(repo.GetAll());
         }
 
         // GET: Skills/Details/5
@@ -29,7 +30,8 @@ namespace DataBaseAnalytics.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Skill skill = repo.Get(id.Value);
+            //Skill skill = repo.Get(id.Value);
+            Skill skill=db.Skills.Find(id);
             if (skill == null)
             {
                 return HttpNotFound();
@@ -52,8 +54,9 @@ namespace DataBaseAnalytics.Controllers
         {
             if (ModelState.IsValid)
             {
-                repo.Add(skill);
-                //db.SaveChanges();
+                //repo.Add(skill);
+                db.Skills.Add(skill);
+                db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
@@ -67,7 +70,8 @@ namespace DataBaseAnalytics.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Skill skill = repo.Get(id.Value);
+            //Skill skill = repo.Get(id.Value);
+            Skill skill = db.Skills.Find(id);
             if (skill == null)
             {
                 return HttpNotFound();
@@ -84,9 +88,9 @@ namespace DataBaseAnalytics.Controllers
         {
             if (ModelState.IsValid)
             {
-                repo.Edit(skill);
-                //db.Entry(skill).State = EntityState.Modified;
-                //db.SaveChanges();
+                //repo.Edit(skill);
+                db.Entry(skill).State = EntityState.Modified;
+                db.SaveChanges();
                 return RedirectToAction("Index");
             }
             return View(skill);
@@ -99,7 +103,8 @@ namespace DataBaseAnalytics.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Skill skill = repo.Get(id.Value);
+            //Skill skill = repo.Get(id.Value);
+            Skill skill = db.Skills.Find(id);
             if (skill == null)
             {
                 return HttpNotFound();
@@ -112,10 +117,11 @@ namespace DataBaseAnalytics.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Skill skill = repo.Get(id);
-            repo.Delete(skill);
-            //db.Skills.Remove(skill);
-            //db.SaveChanges();
+            //Skill skill = repo.Get(id);
+            //repo.Delete(skill);
+            Skill skill = db.Skills.Find(id);
+            db.Skills.Remove(skill);
+            db.SaveChanges();
             return RedirectToAction("Index");
         }
 
@@ -123,7 +129,7 @@ namespace DataBaseAnalytics.Controllers
         {
             if (disposing)
             {
-                //db.Dispose();
+                db.Dispose();
             }
             base.Dispose(disposing);
         }
