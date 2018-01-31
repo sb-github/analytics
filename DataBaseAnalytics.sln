@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2024
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBaseAnalytics", "DataBaseAnalytics\DataBaseAnalytics.csproj", "{3D4BD3B7-7655-4ED7-8EDB-4CD88964819B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportingDataBase", "ReportingDataBase\ReportingDataBase.csproj", "{8E39ACB6-BB93-4190-AFBC-856CBC62D386}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D4BD3B7-7655-4ED7-8EDB-4CD88964819B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D4BD3B7-7655-4ED7-8EDB-4CD88964819B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D4BD3B7-7655-4ED7-8EDB-4CD88964819B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D4BD3B7-7655-4ED7-8EDB-4CD88964819B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E39ACB6-BB93-4190-AFBC-856CBC62D386}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E39ACB6-BB93-4190-AFBC-856CBC62D386}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E39ACB6-BB93-4190-AFBC-856CBC62D386}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E39ACB6-BB93-4190-AFBC-856CBC62D386}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5953206A-1A0F-487B-B341-306012D832F3}
+	EndGlobalSection
+EndGlobal
