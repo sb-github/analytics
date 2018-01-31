@@ -19,8 +19,6 @@ namespace DataBaseAnalytics
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-
-
             //Start timer with start project
             Thread thread = new Thread(new ThreadStart(Time));
             thread.IsBackground = true;

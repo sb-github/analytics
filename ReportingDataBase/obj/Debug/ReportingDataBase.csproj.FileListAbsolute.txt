@@ -25,3 +25,30 @@ D:\Vicktor\-=Navchannya=-\4 kurs\Praktika\DataBaseAnalytics\ReportingDataBase\ob
 D:\Vicktor\-=Navchannya=-\4 kurs\Praktika\DataBaseAnalytics\ReportingDataBase\obj\Debug\ReportingDataBase.pdb
 D:\Vicktor\-=Navchannya=-\4 kurs\Praktika\DataBaseAnalytics\ReportingDataBase\bin\AutoMapper.dll
 D:\Vicktor\-=Navchannya=-\4 kurs\Praktika\DataBaseAnalytics\ReportingDataBase\bin\AutoMapper.xml
+C:\Users\Paul\VSProjects\Analytics\analytics\ReportingDataBase\bin\ReportingDataBase.dll.config
+C:\Users\Paul\VSProjects\Analytics\analytics\ReportingDataBase\bin\ReportingDataBase.dll
+C:\Users\Paul\VSProjects\Analytics\analytics\ReportingDataBase\bin\ReportingDataBase.pdb
+C:\Users\Paul\VSProjects\Analytics\analytics\ReportingDataBase\bin\AutoMapper.dll
+C:\Users\Paul\VSProjects\Analytics\analytics\ReportingDataBase\bin\DnsClient.dll
+C:\Users\Paul\VSProjects\Analytics\analytics\ReportingDataBase\bin\EntityFramework.dll
+C:\Users\Paul\VSProjects\Analytics\analytics\ReportingDataBase\bin\EntityFramework.SqlServer.dll
+C:\Users\Paul\VSProjects\Analytics\analytics\ReportingDataBase\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Paul\VSProjects\Analytics\analytics\ReportingDataBase\bin\MongoDB.Bson.dll
+C:\Users\Paul\VSProjects\Analytics\analytics\ReportingDataBase\bin\MongoDB.Driver.Core.dll
+C:\Users\Paul\VSProjects\Analytics\analytics\ReportingDataBase\bin\MongoDB.Driver.dll
+C:\Users\Paul\VSProjects\Analytics\analytics\ReportingDataBase\bin\MySql.Data.dll
+C:\Users\Paul\VSProjects\Analytics\analytics\ReportingDataBase\bin\System.Buffers.dll
+C:\Users\Paul\VSProjects\Analytics\analytics\ReportingDataBase\bin\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Paul\VSProjects\Analytics\analytics\ReportingDataBase\bin\AutoMapper.xml
+C:\Users\Paul\VSProjects\Analytics\analytics\ReportingDataBase\bin\DnsClient.xml
+C:\Users\Paul\VSProjects\Analytics\analytics\ReportingDataBase\bin\EntityFramework.xml
+C:\Users\Paul\VSProjects\Analytics\analytics\ReportingDataBase\bin\EntityFramework.SqlServer.xml
+C:\Users\Paul\VSProjects\Analytics\analytics\ReportingDataBase\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Paul\VSProjects\Analytics\analytics\ReportingDataBase\bin\MongoDB.Bson.xml
+C:\Users\Paul\VSProjects\Analytics\analytics\ReportingDataBase\bin\MongoDB.Driver.xml
+C:\Users\Paul\VSProjects\Analytics\analytics\ReportingDataBase\bin\MongoDB.Driver.Core.xml
+C:\Users\Paul\VSProjects\Analytics\analytics\ReportingDataBase\bin\MySql.Data.xml
+C:\Users\Paul\VSProjects\Analytics\analytics\ReportingDataBase\obj\Debug\ReportingDataBase.csprojResolveAssemblyReference.cache
+C:\Users\Paul\VSProjects\Analytics\analytics\ReportingDataBase\obj\Debug\ReportingDataBase.csproj.CoreCompileInputs.cache
+C:\Users\Paul\VSProjects\Analytics\analytics\ReportingDataBase\obj\Debug\ReportingDataBase.dll
+C:\Users\Paul\VSProjects\Analytics\analytics\ReportingDataBase\obj\Debug\ReportingDataBase.pdb

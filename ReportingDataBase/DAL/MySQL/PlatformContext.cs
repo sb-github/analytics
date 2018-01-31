@@ -19,7 +19,7 @@ namespace ReportingDataBase.DAL.MySQL
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Skill>().ToTable("skills");
+            modelBuilder.Entity<PlatformSkill>().ToTable("skills");
 
             modelBuilder.Entity<PlatformSkill>()
                 .Property(t => t.ID)
