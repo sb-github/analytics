@@ -188,3 +188,4 @@ D:\Vicktor\-=Navchannya=-\4 kurs\Praktika\analytics\DataBaseAnalytics\obj\Debug\
 D:\Vicktor\-=Navchannya=-\4 kurs\Praktika\analytics\DataBaseAnalytics\obj\Debug\DataBaseAnalytics.dll
 D:\Vicktor\-=Navchannya=-\4 kurs\Praktika\analytics\DataBaseAnalytics\obj\Debug\DataBaseAnalytics.pdb
 C:\Users\Paul\VSProjects\Analytics\analytics\DataBaseAnalytics\bin\MySql.Data.Entity.EF6.dll
+D:\Vicktor\-=Navchannya=-\4 kurs\Praktika\analytics\DataBaseAnalytics\bin\MySql.Data.Entity.EF6.dll

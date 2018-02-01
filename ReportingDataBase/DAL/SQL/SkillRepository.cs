@@ -22,12 +22,13 @@ namespace ReportingDataBase.DAL
             PlatformContext db = new PlatformContext();
             List<PlatformSkill> PlatformSkills = db.PlatformSkills.ToList();
             AutoMapper.Mapper.Initialize(cfg => cfg.AddProfile<MapProfile>());
-            List<Skill> skills = AutoMapper.Mapper.Map<List<PlatformSkill>, List<Skill>>(PlatformSkills);
+            List<Skill> Platform = AutoMapper.Mapper.Map<List<PlatformSkill>, List<Skill>>(PlatformSkills);
+            List<Skill> Database = GetAll();
 
-            for (int i = 0; i < skills.Count; i++)
-            {
-                AddOrModify(skills[i]);
-            }
+            var toAdd = Platform.Where(d => !Database.Any(p => p.SkillName == d.SkillName));
+
+            context.Skills.AddRange(toAdd);
+            context.SaveChanges();
         }
 
         public void AddOrModify(Skill entity) 
