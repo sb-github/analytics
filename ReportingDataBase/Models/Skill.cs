@@ -6,13 +6,17 @@ using System.Web;
 
 namespace ReportingDataBase.Models
 {
-    public class Skill:IEntity
+    public class Skill : IEntity
     {
-        public int ID { get; set; }
+        [Key]
+        public int Id { get; set; }
+
         public string SkillName { get; set; }
         [DataType(DataType.Date)]
         public DateTime? CreatedDate { get; set; }
         [DataType(DataType.Date)]
         public DateTime? UpdatedDate { get; set; }
+
+        public ICollection<ReportingSkills> Reporings { get; set; }
     }
 }

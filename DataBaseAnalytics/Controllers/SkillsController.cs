@@ -7,31 +7,34 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using ReportingDataBase.DAL;
+using ReportingDataBase.DAL.SQL;
 using ReportingDataBase.Models;
 
 namespace DataBaseAnalytics.Controllers
 {
     public class SkillsController : Controller
     {
+        UnityOfwork unity = new UnityOfwork();
         private DatabaseContext db = new DatabaseContext();
         //private SkillRepository repo=new SkillRepository();
 
         // GET: Skills
         public ActionResult Index()
         {
-            return View(db.Skills.ToList());
+            
+            return View(unity.SkillRepository.GetAll().ToList());
             //return View(repo.GetAll());
         }
 
         // GET: Skills/Details/5
-        public ActionResult Details(int? id)
+        public ActionResult Details(int id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             //Skill skill = repo.Get(id.Value);
-            Skill skill = db.Skills.Find(id);
+            Skill skill = unity.SkillRepository.GetById(id);
             if (skill == null)
             {
                 return HttpNotFound();
@@ -54,9 +57,9 @@ namespace DataBaseAnalytics.Controllers
         {
             if (ModelState.IsValid)
             {
-                //repo.Add(skill);
-                db.Skills.Add(skill);
-                db.SaveChanges();
+               
+               unity.SkillRepository.Create(skill);
+               
                 return RedirectToAction("Index");
             }
 
@@ -64,14 +67,14 @@ namespace DataBaseAnalytics.Controllers
         }
 
         // GET: Skills/Edit/5
-        public ActionResult Edit(int? id)
+        public ActionResult Edit(int id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             //Skill skill = repo.Get(id.Value);
-            Skill skill = db.Skills.Find(id);
+            Skill skill = unity.SkillRepository.GetById(id);
             if (skill == null)
             {
                 return HttpNotFound();
@@ -89,49 +92,28 @@ namespace DataBaseAnalytics.Controllers
             if (ModelState.IsValid)
             {
                 //repo.Edit(skill);
-                db.Entry(skill).State = EntityState.Modified;
-                db.SaveChanges();
+                unity.SkillRepository.Update(skill);
+                
                 return RedirectToAction("Index");
             }
             return View(skill);
         }
 
         // GET: Skills/Delete/5
-        public ActionResult Delete(int? id)
+        public ActionResult Delete(int id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             //Skill skill = repo.Get(id.Value);
-            Skill skill = db.Skills.Find(id);
-            if (skill == null)
-            {
-                return HttpNotFound();
-            }
-            return View(skill);
-        }
-
-        // POST: Skills/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
-        {
-            //Skill skill = repo.Get(id);
-            //repo.Delete(skill);
-            Skill skill = db.Skills.Find(id);
-            db.Skills.Remove(skill);
-            db.SaveChanges();
+            Skill skill = unity.SkillRepository.GetById(id);
+            unity.SkillRepository.Remove(skill);
             return RedirectToAction("Index");
         }
 
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+        
+
+       
     }
 }

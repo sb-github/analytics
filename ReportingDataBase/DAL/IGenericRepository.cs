@@ -7,14 +7,13 @@ using System.Threading.Tasks;
 
 namespace ReportingDataBase.DAL
 {
-    interface IGenericRepository<T> where T : class
+    interface IGenericRepository<TEntity> where TEntity : class
     {
-        List<T> GetAll();
-        List<T> FindBy(Expression<Func<T, bool>> predicate);
-        T Get(int id);
-        void Add(T entity);
-        void Delete(T entity);
-        void Edit(T entity);
-        void Save();
+        void Create(TEntity item);
+        TEntity GetById(int id);
+        IEnumerable<TEntity> GetAll();
+        IEnumerable<TEntity> Get(Func<TEntity, bool> predicate);
+        void Remove(TEntity item);
+        void Update(TEntity item);
     }
 }

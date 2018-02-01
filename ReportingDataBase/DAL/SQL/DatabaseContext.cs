@@ -17,5 +17,16 @@ namespace ReportingDataBase.DAL
 
         public DbSet<Skill> Skills { get; set; }
         public DbSet<ReportingSkills> ReportingSkills { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<ReportingSkills>().HasKey<int>(s => s.Id)
+                .Property(p => p.Id).IsRequired();
+            modelBuilder.Entity<ReportingSkills>()
+                .HasRequired<Skill>(s => s.CurrentSkill)
+                .WithMany(d => d.Reporings)
+                .HasForeignKey<int>(s => s.SkillID);
+
+        }
     }
 }

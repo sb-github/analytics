@@ -23,7 +23,7 @@ namespace ReportingDataBase.DAL.MySQL
             modelBuilder.Entity<PlatformSkill>().ToTable("skills");
 
             modelBuilder.Entity<PlatformSkill>()
-                .Property(t => t.ID)
+                .Property(t => t.Id)
                 .HasColumnName("id");
         }
     }

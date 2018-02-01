@@ -5,29 +5,29 @@ using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
 using System.Web;
-using ReportingDataBase.Mapper;
+using ReportingDataBase.MapperSettings;
 using System.Data.Entity;
 
 namespace ReportingDataBase.DAL
 {
-    public class SkillRepository : GenericRepository<DatabaseContext, Skill>
+    public class SkillRepository : GenericRepository<Skill>
     {
-        public SkillRepository()
+        public SkillRepository(DatabaseContext context) : base (context)
         {
-            context = new DatabaseContext();
+           
         }
 
         public void copySkills()
         {
             PlatformContext db = new PlatformContext();
             List<PlatformSkill> PlatformSkills = db.PlatformSkills.ToList();
-            AutoMapper.Mapper.Initialize(cfg => cfg.AddProfile<MapProfile>());
-            List<Skill> skills = AutoMapper.Mapper.Map<List<PlatformSkill>, List<Skill>>(PlatformSkills);
+            List<Skill> Platform = AutoMapper.Mapper.Map<List<PlatformSkill>, List<Skill>>(PlatformSkills);
+            List < Skill > Database = GetAll().ToList();
 
-            for(int i=0;i<skills.Count;i++)
-            {
-                AddOrModify(skills[i]);
-            }
+            var toAdd = Platform.Where(d => !Database.Any(p => p.SkillName == d.SkillName));
+            
+            context.Skills.AddRange(toAdd);
+            context.SaveChanges();
         }
 
         public void AddOrModify(Skill entity) 

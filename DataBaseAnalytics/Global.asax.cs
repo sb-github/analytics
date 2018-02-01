@@ -1,4 +1,6 @@
-﻿using ReportingDataBase.DAL;
+﻿using AutoMapper;
+using ReportingDataBase.DAL;
+using ReportingDataBase.MapperSettings;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,14 +14,23 @@ namespace DataBaseAnalytics
 {
     public class MvcApplication : System.Web.HttpApplication
     {
+
         protected void Application_Start()
         {
+              
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-            SkillRepository repo = new SkillRepository();
+            Mapper.Initialize(cfg =>
+            {
+                cfg.CreateMissingTypeMaps = true;
+                cfg.AddProfile<MapProfile>();
+            }
+            );
+            DatabaseContext context = new DatabaseContext();
+            SkillRepository repo = new SkillRepository(context);
             repo.copySkills();
 
             //Start timer with start project
