@@ -8,7 +8,7 @@ using System.Web;
 
 namespace ReportingDataBase.Queries
 {
-    public class Get
+    public class GetQueries
     {
         public static string GET(string Url, string Data, string Field)
         {
