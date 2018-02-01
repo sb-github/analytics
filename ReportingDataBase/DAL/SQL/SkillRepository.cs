@@ -20,9 +20,9 @@ namespace ReportingDataBase.DAL
         public void copySkills()
         {
             PlatformContext db = new PlatformContext();
-            List<PlatformSkill> PlatformSkills = db.Skills.ToList();
+            List<PlatformSkill> PlatformSkills = db.PlatformSkills.ToList();
             AutoMapper.Mapper.Initialize(cfg => cfg.AddProfile<MapProfile>());
-            List<Skill> skills= AutoMapper.Mapper.Map<List<PlatformSkill>, List<Skill>>(PlatformSkills);
+            List<Skill> skills = AutoMapper.Mapper.Map<List<PlatformSkill>, List<Skill>>(PlatformSkills);
 
             for(int i=0;i<skills.Count;i++)
             {

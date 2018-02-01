@@ -7,6 +7,7 @@ using System.Web;
 
 namespace ReportingDataBase.DAL.MySQL
 {
+    [DbConfigurationType(typeof(MySql.Data.Entity.MySqlEFConfiguration))]
     public class PlatformContext : DbContext
     {
 
@@ -15,7 +16,7 @@ namespace ReportingDataBase.DAL.MySQL
 
         }
 
-        public DbSet<PlatformSkill> Skills { get; set; }
+        public DbSet<PlatformSkill> PlatformSkills { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

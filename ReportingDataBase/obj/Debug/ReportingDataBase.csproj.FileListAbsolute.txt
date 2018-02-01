@@ -79,3 +79,4 @@ D:\Vicktor\-=Navchannya=-\4 kurs\Praktika\analytics\ReportingDataBase\obj\Debug\
 D:\Vicktor\-=Navchannya=-\4 kurs\Praktika\analytics\ReportingDataBase\obj\Debug\ReportingDataBase.csproj.CoreCompileInputs.cache
 D:\Vicktor\-=Navchannya=-\4 kurs\Praktika\analytics\ReportingDataBase\obj\Debug\ReportingDataBase.dll
 D:\Vicktor\-=Navchannya=-\4 kurs\Praktika\analytics\ReportingDataBase\obj\Debug\ReportingDataBase.pdb
+C:\Users\Paul\VSProjects\Analytics\analytics\ReportingDataBase\bin\MySql.Data.Entity.EF6.dll

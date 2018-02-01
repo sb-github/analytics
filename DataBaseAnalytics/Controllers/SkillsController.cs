@@ -31,7 +31,7 @@ namespace DataBaseAnalytics.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             //Skill skill = repo.Get(id.Value);
-            Skill skill=db.Skills.Find(id);
+            Skill skill = db.Skills.Find(id);
             if (skill == null)
             {
                 return HttpNotFound();
