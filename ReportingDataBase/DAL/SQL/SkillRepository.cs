@@ -24,7 +24,7 @@ namespace ReportingDataBase.DAL
             AutoMapper.Mapper.Initialize(cfg => cfg.AddProfile<MapProfile>());
             List<Skill> skills = AutoMapper.Mapper.Map<List<PlatformSkill>, List<Skill>>(PlatformSkills);
 
-            for(int i=0;i<skills.Count;i++)
+            for (int i = 0; i < skills.Count; i++)
             {
                 AddOrModify(skills[i]);
             }
