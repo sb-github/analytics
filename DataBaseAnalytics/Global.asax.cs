@@ -1,4 +1,5 @@
 ﻿using ReportingDataBase.DAL;
+using ReportingDataBase.Queries;
 using System;
 using System.Collections.Generic;
 using System.Linq;
