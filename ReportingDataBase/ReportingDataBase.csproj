@@ -140,6 +140,8 @@
     <Compile Include="DAL\SQL\DatabaseContext.cs" />
     <Compile Include="DAL\SQL\ReportingSkillRepository.cs" />
     <Compile Include="DAL\SQL\SkillRepository.cs" />
+    <Compile Include="DAL\SQL\UnitOfWork.cs" />
+    <Compile Include="MapperSettings\ExtentionMethods.cs" />
     <Compile Include="MapperSettings\MapProfile.cs" />
     <Compile Include="Models\IEntity.cs" />
     <Compile Include="Models\PlatformSkill.cs" />

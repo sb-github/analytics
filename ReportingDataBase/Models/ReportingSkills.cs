@@ -13,5 +13,7 @@ namespace ReportingDataBase.Models
         public int Count { get; set; }
         public DateTime? CreatedDate { get; set; }
         public DateTime? UpdatedDate { get; set; }
+
+        public Skill CurrentSkill { get; set; }
     }
 }

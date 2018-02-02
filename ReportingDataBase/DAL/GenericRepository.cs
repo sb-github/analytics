@@ -7,46 +7,68 @@ using System.Linq.Expressions;
 
 namespace ReportingDataBase.DAL
 {
-    public abstract class GenericRepository<C, T> : IGenericRepository<T> where T : class, IEntity where C : DatabaseContext, new()
+    public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : class
     {
-        public C context { get; set; }
+        internal DatabaseContext context;
+        protected DbSet<TEntity> dbSet;
 
-        public virtual List<T> GetAll()
+        public GenericRepository(DatabaseContext context)
         {
-            List<T> query = context.Set<T>().ToList();
-            return query;
+            this.context = context;
+            this.dbSet = context.Set<TEntity>();
         }
 
-        public List<T> FindBy(Expression<Func<T, bool>> predicate)
+        public void Create(TEntity item)
         {
-            List<T> query = context.Set<T>().Where(predicate).ToList();
-            return query;
-        }
-
-        public T Get(int id)
-        {
-            var query = GetAll().FirstOrDefault(x => x.ID == id);
-            return query;
-        }
-
-        public virtual void Add(T entity)
-        {
-            context.Set<T>().Add(entity);
-        }
-
-        public virtual void Delete(T entity)
-        {
-            context.Set<T>().Remove(entity);
-        }
-
-        public virtual void Edit(T entity)
-        {
-            context.Entry(entity).State = EntityState.Modified;
-        }
-
-        public virtual void Save()
-        {
+            dbSet.Add(item);
             context.SaveChanges();
+        }
+
+        public IEnumerable<TEntity> Get(Func<TEntity, bool> predicate)
+        {
+            return dbSet.AsNoTracking().Where(predicate).ToList();
+        }
+
+        public IEnumerable<TEntity> GetAll()
+        {
+            return dbSet.AsNoTracking().ToList();
+        }
+
+        public TEntity GetById(int id)
+        {
+            return dbSet.Find(id);
+        }
+
+        public void Remove(TEntity item)
+        {
+            dbSet.Remove(item);
+            context.SaveChanges();
+        }
+
+        public void Update(TEntity item)
+        {
+            context.Entry(item).State = EntityState.Modified;
+            context.SaveChanges();
+        }
+
+        //____-METHODS
+        public IEnumerable<TEntity> GetWithInclude(params Expression<Func<TEntity, object>>[] includeProperties)
+        {
+            return Include(includeProperties).ToList();
+        }
+
+        public IEnumerable<TEntity> GetWithInclude(Func<TEntity, bool> predicate,
+            params Expression<Func<TEntity, object>>[] includeProperties)
+        {
+            var query = Include(includeProperties);
+            return query.Where(predicate).ToList();
+        }
+
+        private IQueryable<TEntity> Include(params Expression<Func<TEntity, object>>[] includeProperties)
+        {
+            IQueryable<TEntity> query = dbSet.AsNoTracking();
+            return includeProperties
+                .Aggregate(query, (current, includeProperty) => current.Include(includeProperty));
         }
     }
 }

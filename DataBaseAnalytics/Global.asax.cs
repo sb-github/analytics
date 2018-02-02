@@ -1,4 +1,6 @@
-﻿using ReportingDataBase.DAL;
+﻿using AutoMapper;
+using ReportingDataBase.DAL;
+using ReportingDataBase.MapperSettings;
 using ReportingDataBase.Queries;
 using System;
 using System.Collections.Generic;
@@ -20,10 +22,18 @@ namespace DataBaseAnalytics
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-            SkillRepository repo = new SkillRepository();
+            Mapper.Initialize(cfg =>
+            {
+                cfg.CreateMissingTypeMaps = true;
+                cfg.AddProfile<MapProfile>();
+            }
+           );
+
+            DatabaseContext context = new DatabaseContext();
+            SkillRepository repo = new SkillRepository(context);
             repo.copySkills();
-            ReportingSkillRepository reporting = new ReportingSkillRepository();
-            reporting.FormReporting(DateTime.Now, 1005);
+            ReportingSkillRepository reporting = new ReportingSkillRepository(context);
+            //reporting.FormReporting(DateTime.Now, 1005);
 
             //Start timer with start project
             Thread thread = new Thread(new ThreadStart(Time));
