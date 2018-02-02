@@ -22,6 +22,8 @@ namespace DataBaseAnalytics
 
             SkillRepository repo = new SkillRepository();
             repo.copySkills();
+            ReportingSkillRepository reporting = new ReportingSkillRepository();
+            reporting.FormReporting(DateTime.Now, 1005);
 
             //Start timer with start project
             Thread thread = new Thread(new ThreadStart(Time));
@@ -45,7 +47,7 @@ namespace DataBaseAnalytics
         {
             System.Timers.Timer timer = new System.Timers.Timer();
             timer.Elapsed += new System.Timers.ElapsedEventHandler(TimerEvent);
-            timer.Interval = 3600000;
+            timer.Interval = 600000;
             timer.Enabled = true;
             timer.AutoReset = true;
             timer.Start();

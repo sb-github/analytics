@@ -22,10 +22,17 @@ namespace ReportingDataBase.Queries
 
             using (WebClient wc = new WebClient())
             {
-                var json = wc.DownloadString(Url + "?" + Data);
-                JObject obj = JObject.Parse(json);
-                string result = (string)obj[0]["quantity"];
-                return result;
+                try
+                {
+                    var json = wc.DownloadString(Url + "?" + Data);
+                    JArray obj = JArray.Parse(json);
+                    string result = (string)obj[0][Field];
+                    return result;
+                }
+                catch
+                {
+                    return "0";
+                }
             }            
         }
     }

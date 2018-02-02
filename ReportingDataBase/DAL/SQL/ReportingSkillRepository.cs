@@ -18,7 +18,7 @@ namespace ReportingDataBase.DAL
         {
             Skill skill = context.Skills.Find(id);
             string QueryData = "skill=" + skill.SkillName + "&subskill=no";
-            int count = int.Parse(GetQueries.GET("http://192.168.128.245:8081/extractor/rest/v1/",QueryData, "quantity"));
+            int count = int.Parse(GetQueries.GET("http://192.168.128.245:8081/extractor/rest/v1/", QueryData, "quantity"));
 
             ReportingSkills toAdd = new ReportingSkills { SkillID = id, Count = count, ReportingDate = date, CreatedDate=DateTime.Now};
             Add(toAdd);

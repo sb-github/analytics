@@ -13,7 +13,8 @@ namespace ReportingDataBase.Mapper
         {
             CreateMap<PlatformSkill, Skill>()
                 .ForMember(dest => dest.SkillName, map => map.MapFrom(source => source.title))
-                .ForMember(dest => dest.CreatedDate, map => map.MapFrom(source => DateTime.Now));
+                .ForMember(dest => dest.CreatedDate, map => map.MapFrom(source => DateTime.Now))
+                .ForMember(dest => dest.UpdatedDate, map => map.MapFrom(source => DateTime.Now));
         }
     }
 }
