@@ -113,3 +113,5 @@ D:\SOFTBISTRO\SOFTBISTROANALYTIC\analytics\ReportingDataBase\obj\Debug\Reporting
 D:\SOFTBISTRO\SOFTBISTROANALYTIC\analytics\ReportingDataBase\obj\Debug\ReportingDataBase.csproj.CoreCompileInputs.cache
 D:\SOFTBISTRO\SOFTBISTROANALYTIC\analytics\ReportingDataBase\obj\Debug\ReportingDataBase.dll
 D:\SOFTBISTRO\SOFTBISTROANALYTIC\analytics\ReportingDataBase\obj\Debug\ReportingDataBase.pdb
+D:\SOFTBISTRO\SOFTBISTROANALYTIC\analytics\ReportingDataBase\obj\Debug\ReportingDataBase.Migrations.InitialCreate.resources
+D:\SOFTBISTRO\SOFTBISTROANALYTIC\analytics\ReportingDataBase\obj\Debug\ReportingDataBase.csproj.GenerateResource.Cache

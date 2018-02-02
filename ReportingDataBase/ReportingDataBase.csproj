@@ -143,6 +143,11 @@
     <Compile Include="DAL\SQL\UnitOfWork.cs" />
     <Compile Include="MapperSettings\ExtentionMethods.cs" />
     <Compile Include="MapperSettings\MapProfile.cs" />
+    <Compile Include="Migrations\201802011342434_InitialCreate.cs" />
+    <Compile Include="Migrations\201802011342434_InitialCreate.Designer.cs">
+      <DependentUpon>201802011342434_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\IEntity.cs" />
     <Compile Include="Models\PlatformSkill.cs" />
     <Compile Include="Models\ReportingSkills.cs" />
@@ -150,7 +155,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Queries\GetQueries.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201802011342434_InitialCreate.resx">
+      <DependentUpon>201802011342434_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
