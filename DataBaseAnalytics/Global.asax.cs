@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using ReportingDataBase.DAL;
+using ReportingDataBase.DAL.SQL;
 using ReportingDataBase.MapperSettings;
 using ReportingDataBase.Queries;
 using System;
@@ -28,12 +29,20 @@ namespace DataBaseAnalytics
                 cfg.AddProfile<MapProfile>();
             }
            );
+            
 
             DatabaseContext context = new DatabaseContext();
             SkillRepository repo = new SkillRepository(context);
             repo.copySkills();
+            UnitOfWork skill = new UnitOfWork();
+            var list = skill.SkillRepository.GetAll();
+            
             ReportingSkillRepository reporting = new ReportingSkillRepository(context);
-            //reporting.FormReporting(DateTime.Now, 1005);
+            foreach (var i in list)
+            {
+                reporting.FormReporting(DateTime.Now, i.SkillName , i.ID);
+            }
+
 
             //Start timer with start project
             Thread thread = new Thread(new ThreadStart(Time));

@@ -14,13 +14,12 @@ namespace ReportingDataBase.DAL
         {
         }
 
-        public void FormReporting(DateTime date, int id)
+        public void FormReporting(DateTime date, string skill, int id)
         {
-            UnitOfWork unit = new UnitOfWork();
-            var temp = unit.ReportingSkillRepository.GetById(id);
+           
             
             
-            string QueryData = "skill=" + temp.CurrentSkill.SkillName + "&subskill=no";
+            string QueryData = "skill=" + skill + "&subskill=no";
             int count = int.Parse(GetQueries.GET("http://192.168.128.245:8081/extractor/rest/v1/", QueryData, "quantity"));
 
             ReportingSkills toAdd = new ReportingSkills { SkillID = id, Count = count, ReportingDate = date, CreatedDate=DateTime.Now};
