@@ -15,7 +15,7 @@ namespace DataBaseAnalytics.Controllers
     public class SkillsController : Controller
     {
         UnitOfWork unity = new UnitOfWork();
-        private DatabaseContext db = new DatabaseContext();
+        //private DatabaseContext db = new DatabaseContext();
         //private SkillRepository repo=new SkillRepository();
 
         // GET: Skills
@@ -27,14 +27,14 @@ namespace DataBaseAnalytics.Controllers
         }
 
         // GET: Skills/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             //Skill skill = repo.Get(id.Value);
-            Skill skill = unity.SkillRepository.GetById(id);
+            Skill skill = unity.SkillRepository.GetById(id.Value);
             if (skill == null)
             {
                 return HttpNotFound();
@@ -67,14 +67,14 @@ namespace DataBaseAnalytics.Controllers
         }
 
         // GET: Skills/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             //Skill skill = repo.Get(id.Value);
-            Skill skill = unity.SkillRepository.GetById(id);
+            Skill skill = unity.SkillRepository.GetById(id.Value);
             if (skill == null)
             {
                 return HttpNotFound();
@@ -100,14 +100,14 @@ namespace DataBaseAnalytics.Controllers
         }
 
         // GET: Skills/Delete/5
-        public ActionResult Delete(int id)
+        public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             //Skill skill = repo.Get(id.Value);
-            Skill skill = unity.SkillRepository.GetById(id);
+            Skill skill = unity.SkillRepository.GetById(id.Value);
             unity.SkillRepository.Remove(skill);
             return RedirectToAction("Index");
         }

@@ -186,6 +186,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PlatformSkillController.cs" />
+    <Compile Include="Controllers\ReportingSkillsController.cs" />
     <Compile Include="Controllers\SkillsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -245,6 +246,11 @@
     <Content Include="Views\Skills\Details.cshtml" />
     <Content Include="Views\Skills\Edit.cshtml" />
     <Content Include="Views\Skills\Index.cshtml" />
+    <Content Include="Views\ReportingSkills\Create.cshtml" />
+    <Content Include="Views\ReportingSkills\Delete.cshtml" />
+    <Content Include="Views\ReportingSkills\Details.cshtml" />
+    <Content Include="Views\ReportingSkills\Edit.cshtml" />
+    <Content Include="Views\ReportingSkills\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

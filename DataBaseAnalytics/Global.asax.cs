@@ -29,18 +29,18 @@ namespace DataBaseAnalytics
                 cfg.AddProfile<MapProfile>();
             }
            );
-            
+
 
             DatabaseContext context = new DatabaseContext();
             SkillRepository repo = new SkillRepository(context);
             repo.copySkills();
             UnitOfWork skill = new UnitOfWork();
             var list = skill.SkillRepository.GetAll();
-            
+
             ReportingSkillRepository reporting = new ReportingSkillRepository(context);
             foreach (var i in list)
             {
-                reporting.FormReporting(DateTime.Now, i.SkillName , i.ID);
+                reporting.FormReporting(DateTime.Now.AddDays(-1), i.SkillName, i.ID);
             }
 
 
@@ -58,6 +58,17 @@ namespace DataBaseAnalytics
             {
                 DateTime dateReporting = DateTime.Now.AddDays(-1);
                 //call method
+                DatabaseContext context = new DatabaseContext();
+                SkillRepository repo = new SkillRepository(context);
+                repo.copySkills();
+                UnitOfWork skill = new UnitOfWork();
+                var list = skill.SkillRepository.GetAll();
+
+                ReportingSkillRepository reporting = new ReportingSkillRepository(context);
+                foreach (var i in list)
+                {
+                    reporting.FormReporting(dateReporting, i.SkillName, i.ID);
+                }
             }
         }
 
